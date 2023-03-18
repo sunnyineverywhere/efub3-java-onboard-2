@@ -1,7 +1,6 @@
 package onboard;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 백준 2490
@@ -12,6 +11,31 @@ import java.util.List;
 public class Problem6 {
     public static List<String> solution(Integer[][] values){
         List<String> answer = new ArrayList<>();
+
+        for(int i = 0; i < values.length; i++) {
+            int count = 0;
+            for (int j = 0; j < values[i].length; j++)
+                if (values[i][j] == 1)
+                    count++;
+
+            switch (count) {
+                case 0:
+                    answer.add("D");
+                    break;
+                case 1:
+                    answer.add("C");
+                    break;
+                case 2:
+                    answer.add("B");
+                    break;
+                case 3:
+                    answer.add("A");
+                    break;
+                case 4:
+                    answer.add("E");
+                    break;
+            }
+        }
         return answer;
     }
 }
