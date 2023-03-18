@@ -15,23 +15,23 @@ public class Problem6 {
         for(int i = 0; i < values.length; i++) {
             int count = 0;
             for (int j = 0; j < values[i].length; j++)
-                if (values[i][j] == 1)
+                if (values[i][j] == 0)
                     count++;
 
             switch (count) {
-                case 0:
-                    answer.add("D");
-                    break;
                 case 1:
-                    answer.add("C");
+                    answer.add("A");
                     break;
                 case 2:
                     answer.add("B");
                     break;
                 case 3:
-                    answer.add("A");
+                    answer.add("C");
                     break;
                 case 4:
+                    answer.add("D");
+                    break;
+                case 0:
                     answer.add("E");
                     break;
             }
