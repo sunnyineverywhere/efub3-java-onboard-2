@@ -1,5 +1,6 @@
 import onboard.Problem6;
 import onboard.Problem7;
+import onboard.Problem8;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -32,6 +33,17 @@ public class ProblemTest {
             List<String> values = List.of("AABCDD", "afzz", "09121", "a8EWg6", "P5h3kx");
             String answer = "Aa0aPAf985Bz1EhCz2W3D1gkD6x";
             assertThat(Problem7.solution(values)).isEqualTo(answer);
+        }
+    }
+
+    @Nested
+    class Problem8Test{
+        @Test
+        void case1(){
+            Integer paperNumber = 3;
+            Integer[][] locations = {{3, 7}, {15, 7}, {5, 2}};
+            Integer answer = 260;
+            assertThat(Problem8.solution(paperNumber, locations)).isEqualTo(answer);
         }
     }
 }
