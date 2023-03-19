@@ -13,8 +13,8 @@ public class ProblemTest {
     class Problem6Test{
         @Test
         void case1(){
-            Integer[][] values = {{0, 1, 0, 1}, {1, 1, 1, 0}, {0, 0, 1, 1}};
-            List<String> answer = List.of("B", "A", "B");
+            Integer[][] values = {{0, 1, 0, 1}, {1, 1, 1, 0}, {0, 0, 1, 1}, {0, 0, 0, 0}};
+            List<String> answer = List.of("B", "A", "B", "D");
             assertThat(Problem6.solution(values)).isEqualTo(answer);
         }
     }
