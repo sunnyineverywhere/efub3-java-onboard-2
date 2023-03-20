@@ -17,6 +17,12 @@ public class ProblemTest {
             List<String> answer = List.of("B", "A", "B");
             assertThat(Problem6.solution(values)).isEqualTo(answer);
         }
+        @Test
+        void case2(){
+            Integer[][] values = {{1, 0, 0, 0}, {1, 1, 1, 1}, {1, 0, 1, 1}};
+            List<String> answer = List.of("C", "E", "A");
+            assertThat(Problem6.solution(values)).isEqualTo(answer);
+        }
     }
 
     @Nested
@@ -27,7 +33,6 @@ public class ProblemTest {
             String answer = "Aa0FfBb1GgCc2HhDd3IiEe4Jj";
             assertThat(Problem7.solution(values)).isEqualTo(answer);
         }
-
         @Test
         void case2(){
             List<String> values = List.of("AABCDD", "afzz", "09121", "a8EWg6", "P5h3kx");
