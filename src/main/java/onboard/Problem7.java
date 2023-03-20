@@ -11,7 +11,15 @@ import java.util.List;
  */
 public class Problem7 {
     public static String solution(List<String> values){
-        String answer = "";
-        return answer;
+        /* String answer = ""; */
+        StringBuilder answer = new StringBuilder();
+        for (int i=0; i < 15; i++) {
+            for (int j=0; j < values.size(); j++) {
+                if(i < values.get(j).length()) {
+                    answer.append(values.get(j).charAt(i));
+                }
+            }
+        }
+        return answer.toString();
     }
 }
