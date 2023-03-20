@@ -1,6 +1,5 @@
 package onboard;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,7 +10,23 @@ import java.util.List;
  */
 public class Problem7 {
     public static String solution(List<String> values){
-        String answer = "";
+        String answer;
+        StringBuilder ans = new StringBuilder();
+        char[][] arr = new char[5][15];
+
+        for(int i=0; i<5; i++){
+            for(int j=0; j<values.get(i).length(); j++){
+                arr[i][j] = values.get(i).charAt(j);
+            }
+        }
+
+        for(int i=0; i<15; i++){
+            for(int j=0; j<5; j++){
+                if(arr[j][i] == '\0') continue;
+                ans.append(arr[j][i]);
+            }
+        }
+        answer = ans.toString();
         return answer;
     }
 }
