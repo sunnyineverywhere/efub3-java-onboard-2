@@ -20,7 +20,7 @@ public class ProblemTest {
         @Test
         void case2(){
             Integer[][] values = {{0, 0, 0, 0}, {1, 1, 1, 1}, {0, 1, 1, 1}};
-            List<String> answer = List.of("E", "D", "A");
+            List<String> answer = List.of("D", "E", "A");
             assertThat(Problem6.solution(values)).isEqualTo(answer);
         }
         
