@@ -59,5 +59,13 @@ public class ProblemTest {
             Integer answer = 260;
             assertThat(Problem8.solution(paperNumber, locations)).isEqualTo(answer);
         }
+        
+        @Test
+        void case2(){
+            Integer paperNumber = 4;
+            Integer[][] locations = {{3, 7}, {15, 7}, {5, 2},{8,6}};
+            Integer answer = 271;
+            assertThat(Problem8.solution(paperNumber, locations)).isEqualTo(answer);
+        }
     }
 }
