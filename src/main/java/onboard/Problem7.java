@@ -12,6 +12,11 @@ import java.util.List;
 public class Problem7 {
     public static String solution(List<String> values){
         String answer = "";
+        for (int i=0; i<15; i++){
+            for (int j=0; j<5; j++){
+                answer.concat(values.get(j));
+            }
+        }
         return answer;
     }
 }
