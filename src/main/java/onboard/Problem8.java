@@ -11,6 +11,9 @@ import java.util.List;
 public class Problem8 {
     public static Integer solution(Integer paperNumber, Integer[][] locations){
         Integer answer = 0;
+        answer += paperNumber*100; // 중복된 값 빼기 전
+
+
         return answer;
     }
 }
