@@ -11,33 +11,28 @@ import java.util.Scanner;
  * link : https://www.acmicpc.net/problem/10798
  */
 public class Problem7 {
-    public static String solution(List<String> values){
-        String answer = "";
+    public static String solution(List<String> values) {
+        StringBuilder answer = new StringBuilder();
 
-        //주어진 values -> 문자 넣을 2차원 배열을 선언
-        String [][] mat = new String[5][15];
-        int [] len = new int[5];
+        //string을 배열에 넣기
+        // 문자는 문자로 넣고 아닌건 *문자로
+        Character[][] first = new Character[5][15];
 
-        // 공백문자가 나오기 전까지 len ++
-        for (int i=0; i<5; i++) {
-            for (int j = 0; values.get(j) != "\0"; j++) {
-                len[j]++;
-            }
+        for (int i = 0; i < 5; i++) {
+            String str = values.get(i);
+            Integer len = str.length();
+            for (int j = 0; j < len; j++) first[i][j] = str.charAt(j);
+            for(int j=len; j<15; j++) first[i][j] = '*';
         }
 
-        // len 까지 for 문을 돌려서 mat에 숫자를 넣고
-        for(int i=0; i<5; i++){
-            for (int j=0; j<len[i]; j++){
-                mat[i][j] = values.get(j);
+        //세로로 읽기
+        //문자는 그대로, 아닌건 패스
+        for(int j=0; j<15; j++){
+            for (int i=0; i<5; i++) {
+                if (first[i][j] == '*') continue;
+                answer.append(first[i][j]);
             }
         }
-
-        // 세로로 읽기
-        for (int i=0; i<15; i++){
-            for (int j=0; j<5; j++){
-                answer.concat(mat[j][i]);
-            }
-        }
-        return answer;
+        return answer.toString();
     }
 }
