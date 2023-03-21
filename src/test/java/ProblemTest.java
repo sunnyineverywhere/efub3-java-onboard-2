@@ -23,6 +23,7 @@ public class ProblemTest {
             List<String> answer = List.of("E", "D", "A");
             assertThat(Problem6.solution(values)).isEqualTo(answer);
         }
+        
     }
 
     @Nested
@@ -38,6 +39,13 @@ public class ProblemTest {
         void case2(){
             List<String> values = List.of("AABCDD", "afzz", "09121", "a8EWg6", "P5h3kx");
             String answer = "Aa0aPAf985Bz1EhCz2W3D1gkD6x";
+            assertThat(Problem7.solution(values)).isEqualTo(answer);
+        }
+        
+        @Test
+        void case3(){
+            List<String> values = List.of("ADF", "afee", "1234", "a", "P5");
+            String answer = "Aa1aPDf25Fe3e4";
             assertThat(Problem7.solution(values)).isEqualTo(answer);
         }
     }
