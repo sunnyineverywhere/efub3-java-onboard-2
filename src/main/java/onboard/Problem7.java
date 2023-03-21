@@ -1,7 +1,7 @@
 package onboard;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 백준 10798
@@ -12,6 +12,16 @@ import java.util.List;
 public class Problem7 {
     public static String solution(List<String> values){
         String answer = "";
-        return answer;
+        List<Character> characters = new ArrayList<>();
+        int maxLen = values.stream().mapToInt(String::length).max().getAsInt();
+
+        for (int i = 0; i < maxLen; i++) {
+            for (String value : values) {
+                if (value.length() > i) {
+                    characters.add(value.charAt(i));
+                }
+            }
+        }
+        return characters.stream().map(String::valueOf).collect(Collectors.joining());
     }
 }
