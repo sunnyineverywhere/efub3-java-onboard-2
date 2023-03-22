@@ -17,6 +17,13 @@ public class ProblemTest {
             List<String> answer = List.of("B", "A", "B");
             assertThat(Problem6.solution(values)).isEqualTo(answer);
         }
+        @Test
+        void case2()
+        {
+            Integer[][] values = {{0, 0, 0, 0}, {1, 1, 1, 1}, {0, 1, 1, 1}};
+            List<String> answer = List.of("D", "E", "A");
+            assertThat(Problem6.solution(values)).isEqualTo(answer);
+        }
     }
 
     @Nested
@@ -34,6 +41,12 @@ public class ProblemTest {
             String answer = "Aa0aPAf985Bz1EhCz2W3D1gkD6x";
             assertThat(Problem7.solution(values)).isEqualTo(answer);
         }
+        @Test
+        void case3(){
+            List<String> values = List.of("rnjswldbs", "dlsf", "sdlkf", "sdlfk3", "Tdslkf1");
+            String answer = "rdssTnldddjsllssfkflwfkkl3fd1bs";
+            assertThat(Problem7.solution(values)).isEqualTo(answer);
+        }
     }
 
     @Nested
@@ -43,6 +56,14 @@ public class ProblemTest {
             Integer paperNumber = 3;
             Integer[][] locations = {{3, 7}, {15, 7}, {5, 2}};
             Integer answer = 260;
+            assertThat(Problem8.solution(paperNumber, locations)).isEqualTo(answer);
+        }
+
+        @Test
+        void case2(){
+            Integer paperNumber = 4;
+            Integer[][] locations = {{6, 8}, {4, 9}, {11, 15}, {19, 13}};
+            Integer answer = 294;
             assertThat(Problem8.solution(paperNumber, locations)).isEqualTo(answer);
         }
     }
