@@ -102,7 +102,7 @@
   - Stack: 지역 변수, 매개 변수, 리턴 값
   - Heap: 동적 할당 시 사용 (new(), malloc() 등)
   <br>
-  ![img_1.png](img_1.png)
+  ![img_1.png](img_1.png)[Problem6.java](..%2Fsrc%2Fmain%2Fjava%2Fonboard%2FProblem6.java)
   <br>
 - 각 프로세스는 별도의 주소 공간에서 실행되고, 한 프로세스는 다른 프로세스의 변수나 자료구조에 접근할 수 없음. 
 2. 스레드
