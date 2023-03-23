@@ -17,6 +17,12 @@ public class ProblemTest {
             List<String> answer = List.of("B", "A", "B");
             assertThat(Problem6.solution(values)).isEqualTo(answer);
         }
+        @Test
+        void case2(){
+            Integer[][] values = {{0,0,0,0}, {0,1,0,0}, {1,1,1,1}};
+            List<String> answer=List.of("D","C","E");
+            assertThat(Problem6.solution(values)).isEqualTo(answer);
+        }
     }
 
     @Nested
