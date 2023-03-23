@@ -41,6 +41,13 @@ public class ProblemTest {
             String answer = "Aa0aPAf985Bz1EhCz2W3D1gkD6x";
             assertThat(Problem7.solution(values)).isEqualTo(answer);
         }
+
+        @Test
+        void case3(){
+            List<String> values = List.of("daslfjd", "615168", "afd5364asdf", "dddssaaa", "fdjlk3333");
+            String answer = "d6adfa1fdds5ddjl15slf63skj86a3d4a3aa3s3df";
+            assertThat(Problem7.solution(values)).isEqualTo(answer);
+        }
     }
 
     @Nested
