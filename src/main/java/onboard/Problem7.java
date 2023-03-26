@@ -11,7 +11,22 @@ import java.util.List;
  */
 public class Problem7 {
     public static String solution(List<String> values){
-        String answer = "";
-        return answer;
+        StringBuilder sb = new StringBuilder();
+        Character[][] input = new Character[5][15];
+
+        for(int i=0; i<5; i++){
+            String str = values.get(i);
+            Integer len = str.length();
+            for(int j=0; j<len; j++) input[i][j] = str.charAt(j);
+            for(int j=len; j<15; j++) input[i][j] = '?';
+        }
+
+        for(int j=0; j<15; j++){
+            for(int i=0; i<5; i++){
+                if(input[i][j]=='?') continue;
+                sb.append(input[i][j]);
+            }
+        }
+        return sb.toString();
     }
 }
